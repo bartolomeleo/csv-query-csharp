@@ -1,13 +1,25 @@
-﻿using System;
+﻿using CommandLine;
 
 namespace CSVQueryCSharp
 {
-    public class Search
-    {
+    public partial class Search
+    {       
         public static void Main(string[] args)
-        {            
-            foreach (string arg in args)
-                Console.WriteLine(arg);
-        }
+        {                    
+            try
+            {
+                ParserResult<Options> opts = Parser.Default.ParseArguments<Options>(args).WithParsed(Options.RunOptions).WithNotParsed(Options.HandleParseError);                
+                CsvFileProcessor csvFile = new CsvFileProcessor(opts);
+
+               List<string> matchedValues = csvFile.ProcessLineByLine();
+                
+                foreach (var value in matchedValues)
+                    Console.WriteLine(value);
+            }
+            catch(Exception err)
+            {
+               Console.WriteLine(err.Message); 
+            }             
+        }       
     }
 }

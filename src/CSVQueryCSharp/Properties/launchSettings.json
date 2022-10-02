@@ -2,7 +2,7 @@
   "profiles": {
     "CSVQueryCSharp": {
       "commandName": "Project",
-      "commandLineArgs": "./file.csv 2 Alberto"
+      "commandLineArgs": "C:\\Users\\User\\Source\\Repos\\bartolomeleo\\csv-query-csharp\\test\\CSVQueryCSharp.Test\\csv\\file.csv 2 Alberto"
     },
     "InvalidFilepath": {
       "commandName": "Project",
@@ -14,11 +14,22 @@
     },
     "multple query": {
       "commandName": "Project",
-      "commandLineArgs": "./file.csv 2 \"Fabio FDGJDF\""
+      "commandLineArgs": "C:\\Users\\User\\Source\\Repos\\bartolomeleo\\csv-query-csharp\\test\\CSVQueryCSharp.Test\\csv\\multipleValues.csv 2 \"Fabio FDGJDF\""
     },
     "InvalidFileExtension": {
       "commandName": "Project",
       "commandLineArgs": "./file.css 2 Alberto"
+    },
+    "emptyArguement": {
+      "commandName": "Project"
+    },
+    "someEmptyArguements": {
+      "commandName": "Project",
+      "commandLineArgs": "./file.csv"
+    },
+    "invalidCsvFormat": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\User\\Source\\Repos\\bartolomeleo\\csv-query-csharp\\test\\CSVQueryCSharp.Test\\csv\\invalidCsvFormat.csv 2 Alberto"
     }
   }
 }
