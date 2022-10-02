@@ -10,7 +10,7 @@ namespace CSVQueryCSharp
 
         public CsvFileProcessor(ParserResult<Options> options)
         {
-            _filePath = options.Value.FilePath;
+            _filePath = options.Value.FilePath ?? "";
             _columnIndex = options.Value.ColumnIndex;
             _searchValue = options.Value.SearchValue;            
         }
