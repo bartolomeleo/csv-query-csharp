@@ -2,6 +2,6 @@
 {
     public interface ICsvFileProcessor
     {
-        public List<string> ProcessLineByLine();
+        public List<string?> ProcessLineByLine();
     }
 }

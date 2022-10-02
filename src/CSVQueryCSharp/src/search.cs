@@ -8,10 +8,8 @@ namespace CSVQueryCSharp
         {                    
             try
             {
-                ParserResult<Options> opts = Parser.Default.ParseArguments<Options>(args).WithParsed(Options.RunOptions).WithNotParsed(Options.HandleParseError);                
-                CsvFileProcessor csvFile = new CsvFileProcessor(opts);
-
-               List<string> matchedValues = csvFile.ProcessLineByLine();
+                ParserResult<Options> opts = Parser.Default.ParseArguments<Options>(args).WithParsed(Options.RunOptions).WithNotParsed(Options.HandleParseError);
+                List<string?> matchedValues = new CsvFileProcessor(opts).ProcessLineByLine();
                 
                 foreach (var value in matchedValues)
                     Console.WriteLine(value);

@@ -8,14 +8,14 @@ namespace CSVQueryCSharp
 {
     public class Options
     {
-        [Value(1, Required = true, MetaName = "FilePath", HelpText = "Csv file to query")]
-        public string FilePath { get; set; }
+        [Value(1, Required = true, Default = "", MetaName = "FilePath", HelpText = "Csv file to query")]
+        public string FilePath { get; private set; }
 
         [Value(2, Required = true, MetaName = "ColumnIndex", HelpText = "Column to query should be an integer")]
-        public int ColumnIndex { get; set; }
+        public int ColumnIndex { get; private set; }
 
-        [Value(3, Required = true, MetaName = "SearchValue", HelpText = "Value to query")]
-        public string SearchValue { get; set; }
+        [Value(3, Required = true, Default = "", MetaName = "SearchValue", HelpText = "Value to query")]
+        public string SearchValue { get; private set; }
 
         public static void RunOptions(Options opts)
         {                     
