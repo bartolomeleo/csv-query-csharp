@@ -1,0 +1,24 @@
+{
+  "profiles": {
+    "CSVQueryCSharp": {
+      "commandName": "Project",
+      "commandLineArgs": "./file.csv 2 Alberto"
+    },
+    "InvalidFilepath": {
+      "commandName": "Project",
+      "commandLineArgs": "./test.csv 2 Alberto"
+    },
+    "index column integer": {
+      "commandName": "Project",
+      "commandLineArgs": "./file.csv str Alberto"
+    },
+    "multple query": {
+      "commandName": "Project",
+      "commandLineArgs": "./file.csv 2 \"Fabio FDGJDF\""
+    },
+    "InvalidFileExtension": {
+      "commandName": "Project",
+      "commandLineArgs": "./file.css 2 Alberto"
+    }
+  }
+}
